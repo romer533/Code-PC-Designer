@@ -3,6 +3,7 @@ package ru.myitschool.pcdesigner;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.ListViewCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,25 +13,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    @Override
+    private ListViewCompat mainListView;
+    List<MainListView> listView;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +39,25 @@ public class MainMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mainListView();
+    }
+
+    private List<MainListView> initData() {
+        listView = new ArrayList<>();
+
+        listView.add(new MainListView(1, R.mipmap.cpu, "CPU"));
+        listView.add(new MainListView(2, R.mipmap.motherboard, "Motherboards"));
+        listView.add(new MainListView(3, R.mipmap.ram, "RAM"));
+        listView.add(new MainListView(4, R.mipmap.hdd, "HDD"));
+        listView.add(new MainListView(5, R.mipmap.ssd, "SSD"));
+        listView.add(new MainListView(6, R.mipmap.video_card, "Graphics cards"));
+        listView.add(new MainListView(7, R.mipmap.fan, "Fans"));
+        listView.add(new MainListView(8, R.mipmap.drive, "Optical drives"));
+        listView.add(new MainListView(9, R.mipmap.tower, "Towers"));
+        listView.add(new MainListView(10, R.mipmap.power, "Power supplies"));
+
+        return listView;
     }
 
     @Override
@@ -55,7 +73,7 @@ public class MainMenu extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -73,29 +91,82 @@ public class MainMenu extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.nav_main) {
+            Toast.makeText(getApplicationContext(), "0", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_cpu) {
+            Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_motherboard) {
+            Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_ram) {
+            Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_hdd) {
+            Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_ssd) {
+            Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_video_card) {
+            Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_fan) {
+            Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_drive) {
+            Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_tower) {
+            Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.nav_power) {
+            Toast.makeText(getApplicationContext(), "10", Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void mainListView() {
+        mainListView = (ListViewCompat) findViewById(R.id.main_list_view);
+
+        MainListViewAdapter adapter = new MainListViewAdapter(this, initData());
+
+        mainListView.setAdapter(adapter);
+
+        mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Toast.makeText(getApplicationContext(), "0", Toast.LENGTH_LONG).show();
+                }
+                if (position == 1) {
+                    Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
+                }
+                if (position == 2) {
+                    Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
+                }
+                if (position == 3) {
+                    Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
+                }
+                if (position == 4) {
+                    Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
+                }
+                if (position == 5) {
+                    Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_LONG).show();
+                }
+                if (position == 6) {
+                    Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_LONG).show();
+                }
+                if (position == 7) {
+                    Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
+                }
+                if (position == 8) {
+                    Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
+                }
+                if (position == 9) {
+                    Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
 }

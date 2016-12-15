@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main"
+            android:icon="@mipmap/main"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_cpu"
+            android:icon="@mipmap/cpu"
+            android:title="CPU" />
+        <item
+            android:id="@+id/nav_motherboard"
+            android:icon="@mipmap/motherboard"
+            android:title="Motherboards" />
+        <item
+            android:id="@+id/nav_ram"
+            android:icon="@mipmap/ram"
+            android:title="RAM" />
+        <item
+            android:id="@+id/nav_hdd"
+            android:icon="@mipmap/hdd"
+            android:title="HDD" />
+        <item
+            android:id="@+id/nav_ssd"
+            android:icon="@mipmap/ssd"
+            android:title="SDD" />
+        <item
+            android:id="@+id/nav_video_card"
+            android:icon="@mipmap/video_card"
+            android:title="Graphics cards" />
+        <item
+            android:id="@+id/nav_fan"
+            android:icon="@mipmap/fan"
+            android:title="Fans" />
+        <item
+            android:id="@+id/nav_drive"
+            android:icon="@mipmap/drive"
+            android:title="Optical drives" />
+        <item
+            android:id="@+id/nav_tower"
+            android:icon="@mipmap/tower"
+            android:title="Towers" />
+        <item
+            android:id="@+id/nav_power"
+            android:icon="@mipmap/power"
+            android:title="Power supplies" />
+    </group>
+
+</menu>
