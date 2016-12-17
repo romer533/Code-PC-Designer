@@ -1,17 +1,17 @@
 package ru.myitschool.pcdesigner;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,14 +20,16 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainMenu extends AppCompatActivity
+public class CPUManufacturer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     List<MainListView> listView;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,9 +42,8 @@ public class MainMenu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
         TextView topText = (TextView) findViewById(R.id.topText);
-        topText.setText("Computing Accessories");
+        topText.setText("Manufacturer");
 
         mainListView();
     }
@@ -50,16 +51,8 @@ public class MainMenu extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.cpu, "CPU"));
-        listView.add(new MainListView(2, R.mipmap.motherboard, "Motherboards"));
-        listView.add(new MainListView(3, R.mipmap.ram, "RAM"));
-        listView.add(new MainListView(4, R.mipmap.hdd, "HDD"));
-        listView.add(new MainListView(5, R.mipmap.ssd, "SSD"));
-        listView.add(new MainListView(6, R.mipmap.video_card, "Graphics cards"));
-        listView.add(new MainListView(7, R.mipmap.fan, "Fans"));
-        listView.add(new MainListView(8, R.mipmap.drive, "Optical drives"));
-        listView.add(new MainListView(9, R.mipmap.tower, "Towers"));
-        listView.add(new MainListView(10, R.mipmap.power, "Power supplies"));
+        listView.add(new MainListView(1, R.mipmap.intel, "INTEL"));
+        listView.add(new MainListView(2, R.mipmap.amd, "AMD"));
 
         return listView;
     }
@@ -102,9 +95,9 @@ public class MainMenu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
+            Intent menuManufacturer = new Intent(CPUManufacturer.this, MainMenu.class);
+            startActivity(menuManufacturer);
         } else if (id == R.id.nav_cpu) {
-            Intent cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
-            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_motherboard) {
             Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_ram) {
@@ -140,38 +133,12 @@ public class MainMenu extends AppCompatActivity
         mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Intent cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
-                    startActivity(cpuManufacturer);
+                    Toast.makeText(getApplicationContext(), "0", Toast.LENGTH_LONG).show();
                 }
                 if (position == 1) {
                     Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
                 }
-                if (position == 2) {
-                    Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
-                }
-                if (position == 3) {
-                    Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
-                }
-                if (position == 4) {
-                    Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
-                }
-                if (position == 5) {
-                    Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_LONG).show();
-                }
-                if (position == 6) {
-                    Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_LONG).show();
-                }
-                if (position == 7) {
-                    Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
-                }
-                if (position == 8) {
-                    Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
-                }
-                if (position == 9) {
-                    Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
-                }
             }
         });
     }
-
 }

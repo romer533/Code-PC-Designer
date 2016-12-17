@@ -1,12 +1,12 @@
 package ru.myitschool.pcdesigner;
 
-public class MainListView {
+class MainListView {
 
     private long id;
     private int icon;
     private String name;
 
-    public MainListView(long id, int icon, String name) {
+    MainListView(long id, int icon, String name) {
         this.id = id;
         this.icon = icon;
         this.name = name;
@@ -20,7 +20,7 @@ public class MainListView {
         this.id = id;
     }
 
-    public int getIcon() {
+    int getIcon() {
         return icon;
     }
 

@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class MainListViewAdapter extends BaseAdapter {
+class MainListViewAdapter extends BaseAdapter {
 
     private List<MainListView> listView;
     private LayoutInflater layoutInflater;
 
-    public MainListViewAdapter(Context context, List<MainListView> listView) {
+    MainListViewAdapter(Context context, List<MainListView> listView) {
         this.listView = listView;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
