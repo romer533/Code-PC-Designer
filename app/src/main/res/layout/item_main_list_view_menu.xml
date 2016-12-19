@@ -9,11 +9,12 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@mipmap/cpu"
+        android:gravity="center_vertical"
         android:padding="7dp"
-        android:background="@drawable/background_main_list_left"/>
+        android:background="@drawable/background_main_list_left" />
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:padding="16dp"
         android:gravity="center_vertical"
         android:textSize="20sp"

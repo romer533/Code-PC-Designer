@@ -24,6 +24,7 @@ public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     List<MainListView> listView;
+    Intent cpuManufacturer;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +65,51 @@ public class MainMenu extends AppCompatActivity
         return listView;
     }
 
+    private void mainListView() {
+        ListView mainListView = (ListView) findViewById(R.id.main_list_view);
+
+        MainListViewAdapter adapter = new MainListViewAdapter(this, initData());
+
+        mainListView.setAdapter(adapter);
+
+        mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
+                    startActivity(cpuManufacturer);
+                }
+                if (position == 1) {
+                    cpuManufacturer = new Intent(MainMenu.this, MotherboardsSocket.class);
+                    startActivity(cpuManufacturer);
+                }
+                if (position == 2) {
+                    Toast.makeText(getApplicationContext(), "RAM", Toast.LENGTH_LONG).show();
+                }
+                if (position == 3) {
+                    Toast.makeText(getApplicationContext(), "HDD", Toast.LENGTH_LONG).show();
+                }
+                if (position == 4) {
+                    Toast.makeText(getApplicationContext(), "SSD", Toast.LENGTH_LONG).show();
+                }
+                if (position == 5) {
+                    Toast.makeText(getApplicationContext(), "GRAPHICS CARDS", Toast.LENGTH_LONG).show();
+                }
+                if (position == 6) {
+                    Toast.makeText(getApplicationContext(), "FANS", Toast.LENGTH_LONG).show();
+                }
+                if (position == 7) {
+                    Toast.makeText(getApplicationContext(), "OPTICAL DRIVE", Toast.LENGTH_LONG).show();
+                }
+                if (position == 8) {
+                    Toast.makeText(getApplicationContext(), "TOWER", Toast.LENGTH_LONG).show();
+                }
+                if (position == 9) {
+                    Toast.makeText(getApplicationContext(), "POWER", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -80,7 +126,6 @@ public class MainMenu extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -95,6 +140,7 @@ public class MainMenu extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -102,76 +148,35 @@ public class MainMenu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
+            cpuManufacturer = new Intent(MainMenu.this, MainMenu.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_cpu) {
-            Intent cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
+            cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_motherboard) {
-            Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(MainMenu.this, MotherboardsSocket.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "RAM", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_hdd) {
-            Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "HDD", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_ssd) {
-            Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "SSD", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_video_card) {
-            Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "GRAPHICS CARDS", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_fan) {
-            Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "FANS", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_drive) {
-            Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "OPTICAL DRIVE", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_tower) {
-            Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "TOWER", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_power) {
-            Toast.makeText(getApplicationContext(), "10", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "POWER", Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    private void mainListView() {
-        ListView mainListView = (ListView) findViewById(R.id.main_list_view);
-
-        MainListViewAdapter adapter = new MainListViewAdapter(this, initData());
-
-        mainListView.setAdapter(adapter);
-
-        mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    Intent cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
-                    startActivity(cpuManufacturer);
-                }
-                if (position == 1) {
-                    Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
-                }
-                if (position == 2) {
-                    Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
-                }
-                if (position == 3) {
-                    Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
-                }
-                if (position == 4) {
-                    Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
-                }
-                if (position == 5) {
-                    Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_LONG).show();
-                }
-                if (position == 6) {
-                    Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_LONG).show();
-                }
-                if (position == 7) {
-                    Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
-                }
-                if (position == 8) {
-                    Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
-                }
-                if (position == 9) {
-                    Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
     }
 
 }

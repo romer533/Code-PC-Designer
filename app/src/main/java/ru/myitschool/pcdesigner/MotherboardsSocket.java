@@ -1,13 +1,13 @@
 package ru.myitschool.pcdesigner;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CPUManufacturer extends AppCompatActivity
+public class MotherboardsSocket extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     List<MainListView> listView;
@@ -44,7 +44,7 @@ public class CPUManufacturer extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         TextView topText = (TextView) findViewById(R.id.topText);
-        topText.setText("Manufacturer");
+        topText.setText("Socket");
 
         mainListView();
     }
@@ -52,8 +52,19 @@ public class CPUManufacturer extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.intel, "INTEL"));
-        listView.add(new MainListView(2, R.mipmap.amd, "AMD"));
+        listView.add(new MainListView(1, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011-3 Square ILM"));
+        listView.add(new MainListView(2, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011-3 Narrow ILM"));
+        listView.add(new MainListView(3, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011-3"));
+        listView.add(new MainListView(4, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011 Narrow ILM"));
+        listView.add(new MainListView(5, R.mipmap.socket1+(int) (Math.random()*2), "LGA1151"));
+        listView.add(new MainListView(6, R.mipmap.socket1+(int) (Math.random()*2), "LGA1150"));
+        listView.add(new MainListView(7, R.mipmap.socket1+(int) (Math.random()*2), "LGA1155"));
+        listView.add(new MainListView(8, R.mipmap.socket1+(int) (Math.random()*2), "LGA775"));
+        listView.add(new MainListView(9, R.mipmap.socket1+(int) (Math.random()*2), "FM2 plus"));
+        listView.add(new MainListView(10, R.mipmap.socket1+(int) (Math.random()*2), "FM2"));
+        listView.add(new MainListView(11, R.mipmap.socket1+(int) (Math.random()*2), "AM3 plus"));
+        listView.add(new MainListView(12, R.mipmap.socket1+(int) (Math.random()*2), "AM3"));
+        listView.add(new MainListView(13, R.mipmap.socket1+(int) (Math.random()*2), "AM1"));
 
         return listView;
     }
@@ -61,20 +72,53 @@ public class CPUManufacturer extends AppCompatActivity
     private void mainListView() {
         ListView mainListView = (ListView) findViewById(R.id.main_list_view);
 
+        mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+                    Toast.makeText(getApplicationContext(), "LGA2011-3 Square ILM", Toast.LENGTH_LONG).show();
+                }
+                if (position == 1) {
+                    Toast.makeText(getApplicationContext(), "LGA2011-3 Narrow ILM", Toast.LENGTH_LONG).show();
+                }
+                if (position == 2) {
+                    Toast.makeText(getApplicationContext(), "LGA2011-3", Toast.LENGTH_LONG).show();
+                }
+                if (position == 3) {
+                    Toast.makeText(getApplicationContext(), "LGA2011 Narrow ILM", Toast.LENGTH_LONG).show();
+                }
+                if (position == 4) {
+                    Toast.makeText(getApplicationContext(), "LGA1151", Toast.LENGTH_LONG).show();
+                }
+                if (position == 5) {
+                    Toast.makeText(getApplicationContext(), "LGA1150", Toast.LENGTH_LONG).show();
+                }
+                if (position == 6) {
+                    Toast.makeText(getApplicationContext(), "LGA1155", Toast.LENGTH_LONG).show();
+                }
+                if (position == 7) {
+                    Toast.makeText(getApplicationContext(), "LGA775", Toast.LENGTH_LONG).show();
+                }
+                if (position == 8) {
+                    Toast.makeText(getApplicationContext(), "FM2 plus", Toast.LENGTH_LONG).show();
+                }
+                if (position == 9) {
+                    Toast.makeText(getApplicationContext(), "FM2", Toast.LENGTH_LONG).show();
+                }
+                if (position == 10) {
+                    Toast.makeText(getApplicationContext(), "AM3 plus", Toast.LENGTH_LONG).show();
+                }
+                if (position == 11) {
+                    Toast.makeText(getApplicationContext(), "AM3", Toast.LENGTH_LONG).show();
+                }
+                if (position == 12) {
+                    Toast.makeText(getApplicationContext(), "AM1", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
         MainListViewAdapter adapter = new MainListViewAdapter(this, initData());
 
         mainListView.setAdapter(adapter);
 
-        mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    Toast.makeText(getApplicationContext(), "INTEL", Toast.LENGTH_LONG).show();
-                }
-                if (position == 1) {
-                    Toast.makeText(getApplicationContext(), "AMD", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
     }
 
     @Override
@@ -116,13 +160,13 @@ public class CPUManufacturer extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
-            cpuManufacturer = new Intent(CPUManufacturer.this, MainMenu.class);
+            cpuManufacturer = new Intent(MotherboardsSocket.this, MainMenu.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_cpu) {
-            cpuManufacturer = new Intent(CPUManufacturer.this, CPUManufacturer.class);
+            cpuManufacturer = new Intent(MotherboardsSocket.this, CPUManufacturer.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_motherboard) {
-            cpuManufacturer = new Intent(CPUManufacturer.this, MotherboardsSocket.class);
+            cpuManufacturer = new Intent(MotherboardsSocket.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
             Toast.makeText(getApplicationContext(), "RAM", Toast.LENGTH_LONG).show();
@@ -143,7 +187,6 @@ public class CPUManufacturer extends AppCompatActivity
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        item.setChecked(true);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

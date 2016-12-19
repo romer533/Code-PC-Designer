@@ -5,47 +5,47 @@
         <item
             android:id="@+id/nav_main"
             android:icon="@mipmap/main"
-            android:title="Home" />
+            android:title="@string/home" />
         <item
             android:id="@+id/nav_cpu"
             android:icon="@mipmap/cpu"
-            android:title="CPU" />
+            android:title="@string/cpu" />
         <item
             android:id="@+id/nav_motherboard"
             android:icon="@mipmap/motherboard"
-            android:title="Motherboards" />
+            android:title="@string/motherboards" />
         <item
             android:id="@+id/nav_ram"
             android:icon="@mipmap/ram"
-            android:title="RAM" />
+            android:title="@string/ram" />
         <item
             android:id="@+id/nav_hdd"
             android:icon="@mipmap/hdd"
-            android:title="HDD" />
+            android:title="@string/hdd" />
         <item
             android:id="@+id/nav_ssd"
             android:icon="@mipmap/ssd"
-            android:title="SDD" />
+            android:title="@string/sdd" />
         <item
             android:id="@+id/nav_video_card"
             android:icon="@mipmap/video_card"
-            android:title="Graphics cards" />
+            android:title="@string/graphics_cards" />
         <item
             android:id="@+id/nav_fan"
             android:icon="@mipmap/fan"
-            android:title="Fans" />
+            android:title="@string/fans" />
         <item
             android:id="@+id/nav_drive"
             android:icon="@mipmap/drive"
-            android:title="Optical drives" />
+            android:title="@string/optical_drives" />
         <item
             android:id="@+id/nav_tower"
             android:icon="@mipmap/tower"
-            android:title="Towers" />
+            android:title="@string/towers" />
         <item
             android:id="@+id/nav_power"
             android:icon="@mipmap/power"
-            android:title="Power supplies" />
+            android:title="@string/power_supplies" />
     </group>
 
 </menu>
