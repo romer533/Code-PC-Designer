@@ -33,4 +33,31 @@
         <string name="hdd_12">300 Гб</string>
         <string name="hdd_13">160 Гб</string>
 
+        <string name="ssd_1">4 Тб</string>
+        <string name="ssd_2">2 Тб</string>
+        <string name="ssd_3">1 Тб</string>
+        <string name="ssd_4">960 Гб</string>
+        <string name="ssd_5">800 Гб</string>
+        <string name="ssd_6">512 Гб</string>
+        <string name="ssd_7">500 Гб</string>
+        <string name="ssd_8">480 Гб</string>
+        <string name="ssd_9">400 Гб</string>
+        <string name="ssd_10">360 Гб</string>
+        <string name="ssd_11">275 Гб</string>
+        <string name="ssd_12">256 Гб</string>
+        <string name="ssd_13">250 Гб</string>
+        <string name="ssd_14">240 Гб</string>
+        <string name="ssd_15">200 Гб</string>
+        <string name="ssd_16">180 Гб</string>
+        <string name="ssd_17">150 Гб</string>
+        <string name="ssd_18">128 Гб</string>
+        <string name="ssd_19">120 Гб</string>
+        <string name="ssd_20">80 Гб</string>
+        <string name="ssd_21">64 Гб</string>
+        <string name="ssd_22">60 Гб</string>
+        <string name="ssd_23">32 Гб</string>
+        <string name="ssd_24">30 Гб</string>
+        <string name="ssd_25">16 Гб</string>
+        <string name="ssd_26">8 Гб</string>
+
 </resources>

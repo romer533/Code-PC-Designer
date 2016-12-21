@@ -91,7 +91,8 @@ public class MainMenu extends AppCompatActivity
                     startActivity(cpuManufacturer);
                 }
                 if (position == 4) {
-                    Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();
+                    cpuManufacturer = new Intent(MainMenu.this, SSDMemory.class);
+                    startActivity(cpuManufacturer);
                 }
                 if (position == 5) {
                     Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
@@ -165,7 +166,8 @@ public class MainMenu extends AppCompatActivity
             cpuManufacturer = new Intent(MainMenu.this, HDDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ssd) {
-            Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(MainMenu.this, SSDMemory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_video_card) {
             Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_fan) {

@@ -69,4 +69,31 @@
     <string name="hdd_12">300 Gb</string>
     <string name="hdd_13">160 Gb</string>
 
+    <string name="ssd_1">4 Tb</string>
+    <string name="ssd_2">2 Tb</string>
+    <string name="ssd_3">1 Tb</string>
+    <string name="ssd_4">960 Gb</string>
+    <string name="ssd_5">800 Gb</string>
+    <string name="ssd_6">512 Gb</string>
+    <string name="ssd_7">500 Gb</string>
+    <string name="ssd_8">480 Gb</string>
+    <string name="ssd_9">400 Gb</string>
+    <string name="ssd_10">360 Gb</string>
+    <string name="ssd_11">275 Gb</string>
+    <string name="ssd_12">256 Gb</string>
+    <string name="ssd_13">250 Gb</string>
+    <string name="ssd_14">240 Gb</string>
+    <string name="ssd_15">200 Gb</string>
+    <string name="ssd_16">180 Gb</string>
+    <string name="ssd_17">150 Gb</string>
+    <string name="ssd_18">128 Gb</string>
+    <string name="ssd_19">120 Gb</string>
+    <string name="ssd_20">80 Gb</string>
+    <string name="ssd_21">64 Gb</string>
+    <string name="ssd_22">60 Gb</string>
+    <string name="ssd_23">32 Gb</string>
+    <string name="ssd_24">30 Gb</string>
+    <string name="ssd_25">16 Gb</string>
+    <string name="ssd_26">8 Gb</string>
+
 </resources>
