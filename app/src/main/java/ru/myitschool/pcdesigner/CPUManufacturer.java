@@ -44,7 +44,7 @@ public class CPUManufacturer extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         TextView topText = (TextView) findViewById(R.id.topText);
-        topText.setText("Manufacturer");
+        topText.setText(R.string.manufacturer);
 
         mainListView();
     }
@@ -52,8 +52,8 @@ public class CPUManufacturer extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.intel, "INTEL"));
-        listView.add(new MainListView(2, R.mipmap.amd, "AMD"));
+        listView.add(new MainListView(1, R.mipmap.intel, R.string.intel));
+        listView.add(new MainListView(2, R.mipmap.amd, R.string.amd));
 
         return listView;
     }
@@ -68,10 +68,10 @@ public class CPUManufacturer extends AppCompatActivity
         mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    Toast.makeText(getApplicationContext(), "INTEL", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.intel, Toast.LENGTH_LONG).show();
                 }
                 if (position == 1) {
-                    Toast.makeText(getApplicationContext(), "AMD", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.amd, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -125,21 +125,21 @@ public class CPUManufacturer extends AppCompatActivity
             cpuManufacturer = new Intent(CPUManufacturer.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            Toast.makeText(getApplicationContext(), "RAM", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.ram, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_hdd) {
-            Toast.makeText(getApplicationContext(), "HDD", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.hdd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_ssd) {
-            Toast.makeText(getApplicationContext(), "SSD", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_video_card) {
-            Toast.makeText(getApplicationContext(), "GRAPHICS CARDS", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_fan) {
-            Toast.makeText(getApplicationContext(), "FANS", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_drive) {
-            Toast.makeText(getApplicationContext(), "OPTICAL DRIVE", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_tower) {
-            Toast.makeText(getApplicationContext(), "TOWER", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_power) {
-            Toast.makeText(getApplicationContext(), "POWER", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.power_supplies, Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

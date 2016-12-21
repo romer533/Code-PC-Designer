@@ -1,0 +1,20 @@
+<resources>
+
+        <string name="action_settings">Настройки</string>
+        <string name="home">Главная</string>
+        <string name="cpu">Процессоры</string>
+        <string name="motherboards">Материнские платы</string>
+        <string name="ram">Оперативная память</string>
+        <string name="hdd">Жесткие диски</string>
+        <string name="ssd">Твердотельные накопители</string>
+        <string name="graphics_cards">Видео карты</string>
+        <string name="fans">Вентиляторы</string>
+        <string name="optical_drives">Оптические приводы</string>
+        <string name="towers">Корпуса</string>
+        <string name="power_supplies">Блоки питания</string>
+
+        <string name="computing_accessories">Комплектующие для ПК</string>
+        <string name="manufacturer">Производитель</string>
+        <string name="socket">Разъем</string>
+
+</resources>

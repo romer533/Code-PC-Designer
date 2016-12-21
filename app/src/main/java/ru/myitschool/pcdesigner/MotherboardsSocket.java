@@ -44,7 +44,7 @@ public class MotherboardsSocket extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         TextView topText = (TextView) findViewById(R.id.topText);
-        topText.setText("Socket");
+        topText.setText(R.string.socket);
 
         mainListView();
     }
@@ -52,19 +52,19 @@ public class MotherboardsSocket extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011-3 Square ILM"));
-        listView.add(new MainListView(2, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011-3 Narrow ILM"));
-        listView.add(new MainListView(3, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011-3"));
-        listView.add(new MainListView(4, R.mipmap.socket1+(int) (Math.random()*2), "LGA2011 Narrow ILM"));
-        listView.add(new MainListView(5, R.mipmap.socket1+(int) (Math.random()*2), "LGA1151"));
-        listView.add(new MainListView(6, R.mipmap.socket1+(int) (Math.random()*2), "LGA1150"));
-        listView.add(new MainListView(7, R.mipmap.socket1+(int) (Math.random()*2), "LGA1155"));
-        listView.add(new MainListView(8, R.mipmap.socket1+(int) (Math.random()*2), "LGA775"));
-        listView.add(new MainListView(9, R.mipmap.socket1+(int) (Math.random()*2), "FM2 plus"));
-        listView.add(new MainListView(10, R.mipmap.socket1+(int) (Math.random()*2), "FM2"));
-        listView.add(new MainListView(11, R.mipmap.socket1+(int) (Math.random()*2), "AM3 plus"));
-        listView.add(new MainListView(12, R.mipmap.socket1+(int) (Math.random()*2), "AM3"));
-        listView.add(new MainListView(13, R.mipmap.socket1+(int) (Math.random()*2), "AM1"));
+        listView.add(new MainListView(1, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_1));
+        listView.add(new MainListView(2, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_2));
+        listView.add(new MainListView(3, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_3));
+        listView.add(new MainListView(4, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_4));
+        listView.add(new MainListView(5, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_5));
+        listView.add(new MainListView(6, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_6));
+        listView.add(new MainListView(7, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_7));
+        listView.add(new MainListView(8, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_8));
+        listView.add(new MainListView(9, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_9));
+        listView.add(new MainListView(10, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_10));
+        listView.add(new MainListView(11, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_11));
+        listView.add(new MainListView(12, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_12));
+        listView.add(new MainListView(13, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_13));
 
         return listView;
     }
@@ -169,21 +169,21 @@ public class MotherboardsSocket extends AppCompatActivity
             cpuManufacturer = new Intent(MotherboardsSocket.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            Toast.makeText(getApplicationContext(), "RAM", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.ram, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_hdd) {
-            Toast.makeText(getApplicationContext(), "HDD", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.hdd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_ssd) {
-            Toast.makeText(getApplicationContext(), "SSD", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_video_card) {
-            Toast.makeText(getApplicationContext(), "GRAPHICS CARDS", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_fan) {
-            Toast.makeText(getApplicationContext(), "FANS", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_drive) {
-            Toast.makeText(getApplicationContext(), "OPTICAL DRIVE", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_tower) {
-            Toast.makeText(getApplicationContext(), "TOWER", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_power) {
-            Toast.makeText(getApplicationContext(), "POWER", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), R.string.power_supplies, Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

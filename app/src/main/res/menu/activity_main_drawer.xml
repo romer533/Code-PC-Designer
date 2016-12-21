@@ -16,19 +16,19 @@
             android:title="@string/motherboards" />
         <item
             android:id="@+id/nav_ram"
-            android:icon="@mipmap/ram"
+            android:icon="@mipmap/ram1"
             android:title="@string/ram" />
         <item
             android:id="@+id/nav_hdd"
-            android:icon="@mipmap/hdd"
+            android:icon="@mipmap/hdd1"
             android:title="@string/hdd" />
         <item
             android:id="@+id/nav_ssd"
-            android:icon="@mipmap/ssd"
-            android:title="@string/sdd" />
+            android:icon="@mipmap/ssd1"
+            android:title="@string/ssd" />
         <item
             android:id="@+id/nav_video_card"
-            android:icon="@mipmap/video_card"
+            android:icon="@mipmap/video_card1"
             android:title="@string/graphics_cards" />
         <item
             android:id="@+id/nav_fan"
@@ -36,11 +36,11 @@
             android:title="@string/fans" />
         <item
             android:id="@+id/nav_drive"
-            android:icon="@mipmap/drive"
+            android:icon="@mipmap/drive1"
             android:title="@string/optical_drives" />
         <item
             android:id="@+id/nav_tower"
-            android:icon="@mipmap/tower"
+            android:icon="@mipmap/tower1"
             android:title="@string/towers" />
         <item
             android:id="@+id/nav_power"

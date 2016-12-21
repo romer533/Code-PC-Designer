@@ -4,9 +4,9 @@ class MainListView {
 
     private long id;
     private int icon;
-    private String name;
+    private int name;
 
-    MainListView(long id, int icon, String name) {
+    MainListView(long id, int icon, int name) {
         this.id = id;
         this.icon = icon;
         this.name = name;
@@ -28,11 +28,11 @@ class MainListView {
         this.icon = icon;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
 
