@@ -20,7 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HDDMemory extends AppCompatActivity
+public class GraphicsCardsMemory extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     List<MainListView> listView;
@@ -51,19 +51,13 @@ public class HDDMemory extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_1));
-        listView.add(new MainListView(2, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_2));
-        listView.add(new MainListView(3, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_3));
-        listView.add(new MainListView(4, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_4));
-        listView.add(new MainListView(5, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_5));
-        listView.add(new MainListView(6, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_6));
-        listView.add(new MainListView(7, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_7));
-        listView.add(new MainListView(8, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_8));
-        listView.add(new MainListView(9, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_9));
-        listView.add(new MainListView(10, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_10));
-        listView.add(new MainListView(11, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_11));
-        listView.add(new MainListView(12, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_12));
-        listView.add(new MainListView(13, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_13));
+        listView.add(new MainListView(1, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_1));
+        listView.add(new MainListView(2, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_2));
+        listView.add(new MainListView(3, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_3));
+        listView.add(new MainListView(4, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_4));
+        listView.add(new MainListView(5, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_5));
+        listView.add(new MainListView(6, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_6));
+        listView.add(new MainListView(7, R.mipmap.video_card1+(int) (Math.random()*3), R.string.video_card_7));
 
         return listView;
     }
@@ -97,24 +91,6 @@ public class HDDMemory extends AppCompatActivity
                 }
                 if (position == 6) {
                     Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
-                }
-                if (position == 7) {
-                    Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
-                }
-                if (position == 8) {
-                    Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
-                }
-                if (position == 9) {
-                    Toast.makeText(getApplicationContext(), "10", Toast.LENGTH_LONG).show();
-                }
-                if (position == 10) {
-                    Toast.makeText(getApplicationContext(), "11", Toast.LENGTH_LONG).show();
-                }
-                if (position == 11) {
-                    Toast.makeText(getApplicationContext(), "12", Toast.LENGTH_LONG).show();
-                }
-                if (position == 12) {
-                    Toast.makeText(getApplicationContext(), "13", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -158,25 +134,25 @@ public class HDDMemory extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
-            cpuManufacturer = new Intent(HDDMemory.this, MainMenu.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, MainMenu.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_cpu) {
-            cpuManufacturer = new Intent(HDDMemory.this, CPUManufacturer.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, CPUManufacturer.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_motherboard) {
-            cpuManufacturer = new Intent(HDDMemory.this, MotherboardsSocket.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            cpuManufacturer = new Intent(HDDMemory.this, RAMTypeOfMemory.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, RAMTypeOfMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_hdd) {
-            cpuManufacturer = new Intent(HDDMemory.this, HDDMemory.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, HDDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ssd) {
-            cpuManufacturer = new Intent(HDDMemory.this, SSDMemory.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, SSDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_video_card) {
-            cpuManufacturer = new Intent(HDDMemory.this, GraphicsCardsMemory.class);
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, GraphicsCardsMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_fan) {
             Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();

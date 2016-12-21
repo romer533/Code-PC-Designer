@@ -129,6 +129,45 @@ public class SSDMemory extends AppCompatActivity
                 if (position == 12) {
                     Toast.makeText(getApplicationContext(), "13", Toast.LENGTH_LONG).show();
                 }
+                if (position == 0) {
+                    Toast.makeText(getApplicationContext(), "14", Toast.LENGTH_LONG).show();
+                }
+                if (position == 1) {
+                    Toast.makeText(getApplicationContext(), "15", Toast.LENGTH_LONG).show();
+                }
+                if (position == 2) {
+                    Toast.makeText(getApplicationContext(), "16", Toast.LENGTH_LONG).show();
+                }
+                if (position == 3) {
+                    Toast.makeText(getApplicationContext(), "17", Toast.LENGTH_LONG).show();
+                }
+                if (position == 4) {
+                    Toast.makeText(getApplicationContext(), "18", Toast.LENGTH_LONG).show();
+                }
+                if (position == 5) {
+                    Toast.makeText(getApplicationContext(), "19", Toast.LENGTH_LONG).show();
+                }
+                if (position == 6) {
+                    Toast.makeText(getApplicationContext(), "20", Toast.LENGTH_LONG).show();
+                }
+                if (position == 7) {
+                    Toast.makeText(getApplicationContext(), "21", Toast.LENGTH_LONG).show();
+                }
+                if (position == 8) {
+                    Toast.makeText(getApplicationContext(), "22", Toast.LENGTH_LONG).show();
+                }
+                if (position == 9) {
+                    Toast.makeText(getApplicationContext(), "23", Toast.LENGTH_LONG).show();
+                }
+                if (position == 10) {
+                    Toast.makeText(getApplicationContext(), "24", Toast.LENGTH_LONG).show();
+                }
+                if (position == 11) {
+                    Toast.makeText(getApplicationContext(), "25", Toast.LENGTH_LONG).show();
+                }
+                if (position == 12) {
+                    Toast.makeText(getApplicationContext(), "26", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -189,7 +228,8 @@ public class SSDMemory extends AppCompatActivity
             cpuManufacturer = new Intent(SSDMemory.this, SSDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_video_card) {
-            Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(SSDMemory.this, GraphicsCardsMemory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_fan) {
             Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_drive) {

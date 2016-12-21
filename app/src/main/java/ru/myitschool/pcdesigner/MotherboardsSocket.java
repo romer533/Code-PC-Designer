@@ -178,7 +178,8 @@ public class MotherboardsSocket extends AppCompatActivity
             cpuManufacturer = new Intent(MotherboardsSocket.this, SSDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_video_card) {
-            Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(MotherboardsSocket.this, GraphicsCardsMemory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_fan) {
             Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_drive) {

@@ -96,4 +96,11 @@
     <string name="ssd_25">16 Gb</string>
     <string name="ssd_26">8 Gb</string>
 
+    <string name="video_card_1">8 Gb</string>
+    <string name="video_card_2">6 Gb</string>
+    <string name="video_card_3">4 Gb</string>
+    <string name="video_card_4">3 Gb</string>
+    <string name="video_card_5">2 Gb</string>
+    <string name="video_card_6">1024 Mb</string>
+    <string name="video_card_7">512 Mb</string>
 </resources>
