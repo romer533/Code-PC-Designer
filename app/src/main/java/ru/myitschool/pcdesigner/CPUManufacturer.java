@@ -137,7 +137,8 @@ public class CPUManufacturer extends AppCompatActivity
             cpuManufacturer = new Intent(CPUManufacturer.this, GraphicsCardsMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_fan) {
-            Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(CPUManufacturer.this, FansCategory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_drive) {
             Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_tower) {

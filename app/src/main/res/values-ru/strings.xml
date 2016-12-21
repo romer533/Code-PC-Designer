@@ -12,12 +12,15 @@
         <string name="optical_drives">Оптические приводы</string>
         <string name="towers">Корпуса</string>
         <string name="power_supplies">Блоки питания</string>
+        <string name="coolers">Кулеры</string>
+        <string name="thermal_paste">Термопасты</string>
 
         <string name="computing_accessories">Комплектующие для ПК</string>
         <string name="manufacturer">Производитель</string>
         <string name="socket">Тип разъема</string>
         <string name="type_of_memory">Тип памяти</string>
         <string name="memory">Кол-во памяти</string>
+        <string name="category">Категория</string>
 
         <string name="hdd_1">10 Тб</string>
         <string name="hdd_2">8 Тб</string>
@@ -67,4 +70,5 @@
         <string name="video_card_5">2 Гб</string>
         <string name="video_card_6">1024 Мб</string>
         <string name="video_card_7">512 Мб</string>
+
 </resources>
