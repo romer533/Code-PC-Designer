@@ -103,7 +103,8 @@ public class MainMenu extends AppCompatActivity
                     startActivity(cpuManufacturer);
                 }
                 if (position == 7) {
-                    Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
+                    cpuManufacturer = new Intent(MainMenu.this, OpticalDrivesTypeOfTheOpticalDrive.class);
+                    startActivity(cpuManufacturer);
                 }
                 if (position == 8) {
                     Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
@@ -177,7 +178,8 @@ public class MainMenu extends AppCompatActivity
             cpuManufacturer = new Intent(MainMenu.this, FansCategory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_drive) {
-            Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(MainMenu.this, OpticalDrivesTypeOfTheOpticalDrive.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_tower) {
             Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_power) {

@@ -184,7 +184,8 @@ public class RAMTypeOfMemory extends AppCompatActivity
             cpuManufacturer = new Intent(RAMTypeOfMemory.this, FansCategory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_drive) {
-            Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(RAMTypeOfMemory.this, OpticalDrivesTypeOfTheOpticalDrive.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_tower) {
             Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_power) {

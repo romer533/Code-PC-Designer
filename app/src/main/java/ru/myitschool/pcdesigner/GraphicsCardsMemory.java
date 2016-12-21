@@ -158,7 +158,8 @@ public class GraphicsCardsMemory extends AppCompatActivity
             cpuManufacturer = new Intent(GraphicsCardsMemory.this, FansCategory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_drive) {
-            Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, OpticalDrivesTypeOfTheOpticalDrive.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_tower) {
             Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_power) {

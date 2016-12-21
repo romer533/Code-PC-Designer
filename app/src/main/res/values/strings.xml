@@ -25,6 +25,7 @@
     <string name="type_of_memory">Type of memory</string>
     <string name="memory">Memory</string>
     <string name="category">Category</string>
+    <string name="type_of_the_optical_drive">Type of the optical drive</string>
 
     <string name="intel">INTEL</string>
     <string name="amd">AMD</string>
@@ -106,5 +107,14 @@
     <string name="video_card_5">2 Gb</string>
     <string name="video_card_6">1024 Mb</string>
     <string name="video_card_7">512 Mb</string>
+
+    <string name="drive_1">BD-R/RE</string>
+    <string name="drive_2">BD-ROM</string>
+    <string name="drive_3">DVD±R/RW</string>
+    <string name="drive_4">DVD+R/RW</string>
+    <string name="drive_5">DVD-ROM</string>
+    <string name="drive_6">CD-RW</string>
+    <string name="drive_7">CD-ROM</string>
+    <string name="drive_8">FDD</string>
 
 </resources>

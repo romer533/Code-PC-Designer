@@ -21,6 +21,7 @@
         <string name="type_of_memory">Тип памяти</string>
         <string name="memory">Кол-во памяти</string>
         <string name="category">Категория</string>
+        <string name="type_of_the_optical_drive">Тип оптического привода</string>
 
         <string name="hdd_1">10 Тб</string>
         <string name="hdd_2">8 Тб</string>
