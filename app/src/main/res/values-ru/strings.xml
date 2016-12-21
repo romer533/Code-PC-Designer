@@ -15,7 +15,22 @@
 
         <string name="computing_accessories">Комплектующие для ПК</string>
         <string name="manufacturer">Производитель</string>
-        <string name="socket">Разъем</string>
+        <string name="socket">Тип разъема</string>
         <string name="type_of_memory">Тип памяти</string>
+        <string name="memory">Кол-во памяти</string>
+
+        <string name="hdd_1">10 Тб</string>
+        <string name="hdd_2">8 Тб</string>
+        <string name="hdd_3">6 Тб</string>
+        <string name="hdd_4">4 Тб</string>
+        <string name="hdd_5">3 Тб</string>
+        <string name="hdd_6">2 Тб</string>
+        <string name="hdd_7">1 Тб</string>
+        <string name="hdd_8">900 Гб</string>
+        <string name="hdd_9">600 Гб</string>
+        <string name="hdd_10">500 Гб</string>
+        <string name="hdd_11">320 Гб</string>
+        <string name="hdd_12">300 Гб</string>
+        <string name="hdd_13">160 Гб</string>
 
 </resources>

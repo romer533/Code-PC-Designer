@@ -128,7 +128,8 @@ public class CPUManufacturer extends AppCompatActivity
             cpuManufacturer = new Intent(CPUManufacturer.this, RAMTypeOfMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_hdd) {
-            Toast.makeText(getApplicationContext(), R.string.hdd, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(CPUManufacturer.this, HDDMemory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ssd) {
             Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_video_card) {

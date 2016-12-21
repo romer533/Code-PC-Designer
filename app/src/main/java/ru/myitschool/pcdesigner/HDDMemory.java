@@ -3,7 +3,6 @@ package ru.myitschool.pcdesigner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,7 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainMenu extends AppCompatActivity
+public class HDDMemory extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     List<MainListView> listView;
@@ -43,7 +43,7 @@ public class MainMenu extends AppCompatActivity
 
 
         TextView topText = (TextView) findViewById(R.id.topText);
-        topText.setText(R.string.computing_accessories);
+        topText.setText(R.string.memory);
 
         mainListView();
     }
@@ -51,16 +51,19 @@ public class MainMenu extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.cpu, R.string.cpu));
-        listView.add(new MainListView(2, R.mipmap.motherboard, R.string.motherboards));
-        listView.add(new MainListView(3, R.mipmap.ram1, R.string.ram));
-        listView.add(new MainListView(4, R.mipmap.hdd1, R.string.hdd));
-        listView.add(new MainListView(5, R.mipmap.ssd1, R.string.ssd));
-        listView.add(new MainListView(6, R.mipmap.video_card1, R.string.graphics_cards));
-        listView.add(new MainListView(7, R.mipmap.fan, R.string.fans));
-        listView.add(new MainListView(8, R.mipmap.drive1, R.string.optical_drives));
-        listView.add(new MainListView(9, R.mipmap.tower1, R.string.towers));
-        listView.add(new MainListView(10, R.mipmap.power, R.string.power_supplies));
+        listView.add(new MainListView(1, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_1));
+        listView.add(new MainListView(2, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_2));
+        listView.add(new MainListView(3, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_3));
+        listView.add(new MainListView(4, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_4));
+        listView.add(new MainListView(5, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_5));
+        listView.add(new MainListView(6, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_6));
+        listView.add(new MainListView(7, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_7));
+        listView.add(new MainListView(8, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_8));
+        listView.add(new MainListView(9, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_9));
+        listView.add(new MainListView(10, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_10));
+        listView.add(new MainListView(11, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_11));
+        listView.add(new MainListView(12, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_12));
+        listView.add(new MainListView(13, R.mipmap.hdd1+(int) (Math.random()*2), R.string.hdd_13));
 
         return listView;
     }
@@ -75,38 +78,43 @@ public class MainMenu extends AppCompatActivity
         mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) {
-                    cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
-                    startActivity(cpuManufacturer);
+                    Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_LONG).show();
                 }
                 if (position == 1) {
-                    cpuManufacturer = new Intent(MainMenu.this, MotherboardsSocket.class);
-                    startActivity(cpuManufacturer);
+                    Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_LONG).show();
                 }
                 if (position == 2) {
-                    cpuManufacturer = new Intent(MainMenu.this, RAMTypeOfMemory.class);
-                    startActivity(cpuManufacturer);
+                    Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
                 }
                 if (position == 3) {
-                    cpuManufacturer = new Intent(MainMenu.this, HDDMemory.class);
-                    startActivity(cpuManufacturer);
+                    Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
                 }
                 if (position == 4) {
-                    Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "5", Toast.LENGTH_LONG).show();
                 }
                 if (position == 5) {
-                    Toast.makeText(getApplicationContext(), R.string.graphics_cards, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "6", Toast.LENGTH_LONG).show();
                 }
                 if (position == 6) {
-                    Toast.makeText(getApplicationContext(), R.string.fans, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "7", Toast.LENGTH_LONG).show();
                 }
                 if (position == 7) {
-                    Toast.makeText(getApplicationContext(), R.string.optical_drives, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "8", Toast.LENGTH_LONG).show();
                 }
                 if (position == 8) {
-                    Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "9", Toast.LENGTH_LONG).show();
                 }
                 if (position == 9) {
-                    Toast.makeText(getApplicationContext(), R.string.power_supplies, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "10", Toast.LENGTH_LONG).show();
+                }
+                if (position == 10) {
+                    Toast.makeText(getApplicationContext(), "11", Toast.LENGTH_LONG).show();
+                }
+                if (position == 11) {
+                    Toast.makeText(getApplicationContext(), "12", Toast.LENGTH_LONG).show();
+                }
+                if (position == 12) {
+                    Toast.makeText(getApplicationContext(), "13", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -150,19 +158,19 @@ public class MainMenu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_main) {
-            cpuManufacturer = new Intent(MainMenu.this, MainMenu.class);
+            cpuManufacturer = new Intent(HDDMemory.this, MainMenu.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_cpu) {
-            cpuManufacturer = new Intent(MainMenu.this, CPUManufacturer.class);
+            cpuManufacturer = new Intent(HDDMemory.this, CPUManufacturer.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_motherboard) {
-            cpuManufacturer = new Intent(MainMenu.this, MotherboardsSocket.class);
+            cpuManufacturer = new Intent(HDDMemory.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            cpuManufacturer = new Intent(MainMenu.this, RAMTypeOfMemory.class);
+            cpuManufacturer = new Intent(HDDMemory.this, RAMTypeOfMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_hdd) {
-            cpuManufacturer = new Intent(MainMenu.this, HDDMemory.class);
+            cpuManufacturer = new Intent(HDDMemory.this, HDDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ssd) {
             Toast.makeText(getApplicationContext(), R.string.ssd, Toast.LENGTH_LONG).show();

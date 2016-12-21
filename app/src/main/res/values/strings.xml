@@ -21,6 +21,7 @@
     <string name="manufacturer">Manufacturer</string>
     <string name="socket">Socket</string>
     <string name="type_of_memory">Type of memory</string>
+    <string name="memory">Memory</string>
 
     <string name="intel">INTEL</string>
     <string name="amd">AMD</string>
@@ -53,6 +54,19 @@
     <string name="ram_11">DDR2</string>
     <string name="ram_12">Registered DDR</string>
     <string name="ram_13">DDR SDRAM</string>
-    <string name="title_activity_ramtype_of_memory">RAMTypeOfMemory</string>
+
+    <string name="hdd_1">10 Tb</string>
+    <string name="hdd_2">8 Tb</string>
+    <string name="hdd_3">6 Tb</string>
+    <string name="hdd_4">4 Tb</string>
+    <string name="hdd_5">3 Tb</string>
+    <string name="hdd_6">2 Tb</string>
+    <string name="hdd_7">1 Tb</string>
+    <string name="hdd_8">900 Gb</string>
+    <string name="hdd_9">600 Gb</string>
+    <string name="hdd_10">500 Gb</string>
+    <string name="hdd_11">320 Gb</string>
+    <string name="hdd_12">300 Gb</string>
+    <string name="hdd_13">160 Gb</string>
 
 </resources>
