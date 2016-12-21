@@ -52,19 +52,19 @@ public class MotherboardsSocket extends AppCompatActivity
     private List<MainListView> initData() {
         listView = new ArrayList<>();
 
-        listView.add(new MainListView(1, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_1));
-        listView.add(new MainListView(2, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_2));
-        listView.add(new MainListView(3, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_3));
-        listView.add(new MainListView(4, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_4));
-        listView.add(new MainListView(5, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_5));
-        listView.add(new MainListView(6, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_6));
-        listView.add(new MainListView(7, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_7));
-        listView.add(new MainListView(8, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_8));
-        listView.add(new MainListView(9, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_9));
-        listView.add(new MainListView(10, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_10));
-        listView.add(new MainListView(11, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_11));
-        listView.add(new MainListView(12, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_12));
-        listView.add(new MainListView(13, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_in_motherboard_13));
+        listView.add(new MainListView(1, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_1));
+        listView.add(new MainListView(2, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_2));
+        listView.add(new MainListView(3, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_3));
+        listView.add(new MainListView(4, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_4));
+        listView.add(new MainListView(5, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_5));
+        listView.add(new MainListView(6, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_6));
+        listView.add(new MainListView(7, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_7));
+        listView.add(new MainListView(8, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_8));
+        listView.add(new MainListView(9, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_9));
+        listView.add(new MainListView(10, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_10));
+        listView.add(new MainListView(11, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_11));
+        listView.add(new MainListView(12, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_12));
+        listView.add(new MainListView(13, R.mipmap.socket1+(int) (Math.random()*2), R.string.socket_13));
 
         return listView;
     }
@@ -169,7 +169,8 @@ public class MotherboardsSocket extends AppCompatActivity
             cpuManufacturer = new Intent(MotherboardsSocket.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            Toast.makeText(getApplicationContext(), R.string.ram, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(MotherboardsSocket.this, RAMTypeOfMemory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_hdd) {
             Toast.makeText(getApplicationContext(), R.string.hdd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_ssd) {

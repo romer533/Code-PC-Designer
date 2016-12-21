@@ -4,37 +4,55 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-        <string name="action_settings">Settings</string>
-        <string name="home">Home</string>
-        <string name="cpu">CPU</string>
-        <string name="motherboards">Motherboards</string>
-        <string name="ram">RAM</string>
-        <string name="hdd">HDD</string>
-        <string name="ssd">SDD</string>
-        <string name="graphics_cards">Graphics cards</string>
-        <string name="fans">Fans</string>
-        <string name="optical_drives">Optical drives</string>
-        <string name="towers">Towers</string>
-        <string name="power_supplies">Power supplies</string>
-        <string name="intel">INTEL</string>
-        <string name="amd">AMD</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="cpu">CPU</string>
+    <string name="motherboards">Motherboards</string>
+    <string name="ram">RAM</string>
+    <string name="hdd">HDD</string>
+    <string name="ssd">SDD</string>
+    <string name="graphics_cards">Graphics cards</string>
+    <string name="fans">Fans</string>
+    <string name="optical_drives">Optical drives</string>
+    <string name="towers">Towers</string>
+    <string name="power_supplies">Power supplies</string>
 
-        <string name="computing_accessories">Computing accessories</string>
-        <string name="manufacturer">Manufacturer</string>
-        <string name="socket">Socket</string>
+    <string name="computing_accessories">Computing accessories</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="socket">Socket</string>
+    <string name="type_of_memory">Type of memory</string>
 
-        <string name="socket_in_motherboard_1">LGA2011–3 Square ILM</string>
-        <string name="socket_in_motherboard_2">LGA2011–3 Narrow ILM</string>
-        <string name="socket_in_motherboard_3">LGA2011–3</string>
-        <string name="socket_in_motherboard_4">LGA2011 Narrow ILM</string>
-        <string name="socket_in_motherboard_5">LGA1151</string>
-        <string name="socket_in_motherboard_6">LGA1150</string>
-        <string name="socket_in_motherboard_7">LGA1155</string>
-        <string name="socket_in_motherboard_8">LGA775</string>
-        <string name="socket_in_motherboard_9">FM2 plus</string>
-        <string name="socket_in_motherboard_10">FM2</string>
-        <string name="socket_in_motherboard_11">AM3 plus</string>
-        <string name="socket_in_motherboard_12">AM3</string>
-        <string name="socket_in_motherboard_13">AM1</string>
+    <string name="intel">INTEL</string>
+    <string name="amd">AMD</string>
+
+
+    <string name="socket_1">LGA2011–3 Square ILM</string>
+    <string name="socket_2">LGA2011–3 Narrow ILM</string>
+    <string name="socket_3">LGA2011–3</string>
+    <string name="socket_4">LGA2011 Narrow ILM</string>
+    <string name="socket_5">LGA1151</string>
+    <string name="socket_6">LGA1150</string>
+    <string name="socket_7">LGA1155</string>
+    <string name="socket_8">LGA775</string>
+    <string name="socket_9">FM2 plus</string>
+    <string name="socket_10">FM2</string>
+    <string name="socket_11">AM3 plus</string>
+    <string name="socket_12">AM3</string>
+    <string name="socket_13">AM1</string>
+
+    <string name="ram_1">Registered DDR4</string>
+    <string name="ram_2">DDR4 ECC</string>
+    <string name="ram_3">DDR4</string>
+    <string name="ram_4">LV Registered DDR3</string>
+    <string name="ram_5">Registered DDR3</string>
+    <string name="ram_6">LRDIMM DDR3</string>
+    <string name="ram_7">LV DDR3 ECC</string>
+    <string name="ram_8">DDR3 ECC</string>
+    <string name="ram_9">LV DDR3</string>
+    <string name="ram_10">DDR3</string>
+    <string name="ram_11">DDR2</string>
+    <string name="ram_12">Registered DDR</string>
+    <string name="ram_13">DDR SDRAM</string>
+    <string name="title_activity_ramtype_of_memory">RAMTypeOfMemory</string>
 
 </resources>

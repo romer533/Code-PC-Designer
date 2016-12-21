@@ -83,7 +83,8 @@ public class MainMenu extends AppCompatActivity
                     startActivity(cpuManufacturer);
                 }
                 if (position == 2) {
-                    Toast.makeText(getApplicationContext(), R.string.ram, Toast.LENGTH_LONG).show();
+                    cpuManufacturer = new Intent(MainMenu.this, RAMTypeOfMemory.class);
+                    startActivity(cpuManufacturer);
                 }
                 if (position == 3) {
                     Toast.makeText(getApplicationContext(), R.string.hdd, Toast.LENGTH_LONG).show();
@@ -157,7 +158,8 @@ public class MainMenu extends AppCompatActivity
             cpuManufacturer = new Intent(MainMenu.this, MotherboardsSocket.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_ram) {
-            Toast.makeText(getApplicationContext(), R.string.ram, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(MainMenu.this, RAMTypeOfMemory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_hdd) {
             Toast.makeText(getApplicationContext(), R.string.hdd, Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_ssd) {
