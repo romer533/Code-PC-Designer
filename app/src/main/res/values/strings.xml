@@ -26,6 +26,8 @@
     <string name="memory">Memory</string>
     <string name="category">Category</string>
     <string name="type_of_the_optical_drive">Type of the optical drive</string>
+    <string name="form_factor">Form factor</string>
+    <string name="power">Power</string>
 
     <string name="intel">INTEL</string>
     <string name="amd">AMD</string>
@@ -116,5 +118,30 @@
     <string name="drive_6">CD-RW</string>
     <string name="drive_7">CD-ROM</string>
     <string name="drive_8">FDD</string>
+
+    <string name="tower_1">Enhanced Extended ATX</string>
+    <string name="tower_2">Extended ATX</string>
+    <string name="tower_3">SSI CEB</string>
+    <string name="tower_4">XL-ATX</string>
+    <string name="tower_5">ATX</string>
+    <string name="tower_6">MicroATX</string>
+    <string name="tower_7">FlexATX</string>
+    <string name="tower_8">Mini-DTX</string>
+    <string name="tower_9">MiniITX</string>
+
+    <string name="power_1">More than 1000 W</string>
+    <string name="power_2">851 – 1000 W</string>
+    <string name="power_3">801 – 850 W</string>
+    <string name="power_4">751 – 800 W</string>
+    <string name="power_5">701 – 750 W</string>
+    <string name="power_6">651 – 700 W</string>
+    <string name="power_7">601 – 650 W</string>
+    <string name="power_8">551 – 600 W</string>
+    <string name="power_9">501 – 550 W</string>
+    <string name="power_10">451 – 500 W</string>
+    <string name="power_11">401 – 450 W</string>
+    <string name="power_12">351 – 400 W</string>
+    <string name="power_13">301 – 350 W</string>
+    <string name="power_14">Less than 300 W</string>
 
 </resources>

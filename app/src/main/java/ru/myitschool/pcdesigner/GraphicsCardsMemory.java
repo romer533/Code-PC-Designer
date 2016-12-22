@@ -161,9 +161,11 @@ public class GraphicsCardsMemory extends AppCompatActivity
             cpuManufacturer = new Intent(GraphicsCardsMemory.this, OpticalDrivesTypeOfTheOpticalDrive.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_tower) {
-            Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, FansCategory.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_power) {
-            Toast.makeText(getApplicationContext(), R.string.power_supplies, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(GraphicsCardsMemory.this, PowerPower.class);
+            startActivity(cpuManufacturer);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

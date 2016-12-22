@@ -234,12 +234,14 @@ public class SSDMemory extends AppCompatActivity
             cpuManufacturer = new Intent(SSDMemory.this, FansCategory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_drive) {
-            cpuManufacturer = new Intent(SSDMemory.this, OpticalDrivesTypeOfTheOpticalDrive.class);
+            cpuManufacturer = new Intent(SSDMemory.this, SSDMemory.class);
             startActivity(cpuManufacturer);
         } else if (id == R.id.nav_tower) {
-            Toast.makeText(getApplicationContext(), R.string.towers, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(SSDMemory.this, CPUManufacturer.class);
+            startActivity(cpuManufacturer);
         } else if (id == R.id.nav_power) {
-            Toast.makeText(getApplicationContext(), R.string.power_supplies, Toast.LENGTH_LONG).show();
+            cpuManufacturer = new Intent(SSDMemory.this, PowerPower.class);
+            startActivity(cpuManufacturer);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
